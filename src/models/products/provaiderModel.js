@@ -4,6 +4,7 @@ const providerSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
+        unique: true
 
     },
     email: {
