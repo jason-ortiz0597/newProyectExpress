@@ -6,11 +6,9 @@ import {getProvaider,createProvaider,deleteProvaider} from "../../controllers/pr
 const router = Router();
 
 router.get("/list", getProvaider);
-// router.get("/list/types", getTypesProvaider);
 router.post("/create", fileUpload({ useTempFiles: true, tempFileDir: './tmp'}), createProvaider);
-// router.post("/createTypeProvider/:id", createTypeProvider);
 router.delete("/delete/:id", deleteProvaider);
-// router.delete("/deleteTypeProvider/:id/:idType", deleteTypeProvider);
+
 
 
 export default router;
