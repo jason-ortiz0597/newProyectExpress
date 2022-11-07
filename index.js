@@ -20,7 +20,7 @@ app.use(express.json());
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 app.use(history())
-app.use(serveStatic(path.join(__dirname, 'dist/spa')))
+app.use(serveStatic(path.join(__dirname, '/dist/spa')))
 
 
 app.get('/',(req,res)=>{
