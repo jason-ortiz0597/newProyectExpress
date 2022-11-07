@@ -5,6 +5,8 @@ import cors from 'cors';
 import provaiderRoutes from "./src/routes/products/provaiderRoutes.js";
 import serveStatic from 'serve-static'; 
 import history from 'connect-history-api-fallback';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 
 const app = express()
@@ -12,6 +14,9 @@ const app = express()
 app.use(cors());
 
 app.use(express.json());
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 app.use(history())
 app.use(serveStatic(__dirname + '/dist/spa'))
