@@ -1,4 +1,4 @@
-import mongoose, { version } from "mongoose";
+import mongoose from "mongoose";
 
 const providerSchema = new mongoose.Schema({
     name: {
@@ -31,6 +31,12 @@ const providerSchema = new mongoose.Schema({
 
     address: {
         type: String
+    },
+
+    image: {
+
+        public_id: String,
+        secure_url: String
     },
 
 },
