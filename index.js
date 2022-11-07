@@ -3,12 +3,18 @@ import "dotenv/config";
 import "./src/database/connect.js";
 import cors from 'cors';
 import provaiderRoutes from "./src/routes/products/provaiderRoutes.js";
+import serveStatic from 'serve-static'; 
+import history from 'connect-history-api-fallback';
+
 
 const app = express()
 
 app.use(cors());
 
 app.use(express.json());
+
+app.use(history())
+app.use(serveStatic(__dirname + '/dist/spa'))
 
 app.get('/',(req,res)=>{
     res.send('welcome to App Siipi BackEnd')
