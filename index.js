@@ -24,7 +24,7 @@ app.use(express.json());
 
 
 app.get('/',(req,res)=>{
-    res.send('welcome to App Siipi BackEnd')
+    res.send('welcome to App Siipi BackEnd v02')
 })
 
 app.use("/api/v2/provaider", provaiderRoutes);
